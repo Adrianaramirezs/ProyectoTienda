@@ -1,0 +1,40 @@
+﻿@model Usuario
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Nombre)
+        @Html.TextBoxFor(model => model.Nombre)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Apellido1)
+        @Html.TextBoxFor(model => model.Apellido1)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Apellido2)
+        @Html.TextBoxFor(model => model.Apellido2)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Correo)
+        @Html.TextBoxFor(model => model.Correo)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Telefono)
+        @Html.TextBoxFor(model => model.Telefono)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Direccion)
+        @Html.TextBoxFor(model => model.Direccion)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.ID_Rol)
+        @Html.TextBoxFor(model => model.ID_Rol)
+    </div>
+    <input type="submit" value="Create" />
+}

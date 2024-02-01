@@ -9,12 +9,12 @@ namespace Sincronias.Controllers
 {
     public class UserController : Controller
     {
-        private VentasEntities db = new VentasEntities();
+       // private X db = new X();
 
         // GET: User
         public ActionResult Index()
         {
-            List<User> users = db.Users.ToList();
+           //  List<Usuario> users = db.Users.ToList();
             return View(users);
         }
 
@@ -26,7 +26,7 @@ namespace Sincronias.Controllers
 
         // POST: User/Create
         [HttpPost]
-        public ActionResult Create(User user)
+        public ActionResult Create(Usuario user)
         {
             if (ModelState.IsValid)
             {
@@ -41,7 +41,7 @@ namespace Sincronias.Controllers
         // GET: User/Edit/5
         public ActionResult Edit(int id)
         {
-            User user = db.Users.Find(id);
+                 user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -52,7 +52,7 @@ namespace Sincronias.Controllers
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(User user)
+        public ActionResult Edit(Usuario user)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace Sincronias.Controllers
         // GET: User/Delete/5
         public ActionResult Delete(int id)
         {
-            User user = db.Users.Find(id);
+            Usuario user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -80,7 +80,7 @@ namespace Sincronias.Controllers
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
-            User user = db.Users.Find(id);
+            Usuario user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -94,7 +94,7 @@ namespace Sincronias.Controllers
         // GET: User/Details/5
         public ActionResult Details(int id)
         {
-            User user = db.Users.Find(id);
+            Usuario user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
